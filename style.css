@@ -1,0 +1,779 @@
+/* Garantire che la barra di scorrimento rimanga sempre visibile */
+body {
+    overflow-y: scroll; /* Forza la visualizzazione della barra di scorrimento */
+    height: 100vh; /* Imposta l'altezza della finestra */
+    margin: 0; /* Rimuove il margine di default */
+    padding: 0; /* Rimuove il padding di default */
+}
+
+/* Personalizzazione per Chrome, Safari, Edge */
+::-webkit-scrollbar {
+    width: 16px; /* Larghezza della barra di scorrimento */
+    height: 16px; /* Altezza della barra orizzontale (se visibile) */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ff5733;  /* Colore arancione per la parte mobile della barra */
+    border-radius: 8px;  /* Angoli arrotondati */
+    border: 4px solid #e0e0e0; /* Bordo per la parte mobile per migliorare la visibilità */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;  /* Colore di sfondo della traccia */
+    border-radius: 8px;  /* Angoli arrotondati */
+}
+
+/* Personalizzazione per Firefox */
+html {
+    scrollbar-color: #ff5733 #f1f1f1;  /* thumb arancione, traccia grigia */
+}
+
+/* Stile per il corpo e la tipografia */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('Immagini/Campo.jpg'); /* Sostituisci con il percorso dell'immagine */
+    background-size: cover; /* Adatta l'immagine per coprire l'intera area del body */
+    background-position: center; /* Centra l'immagine */
+    background-attachment: fixed; /* Fissa l'immagine quando scorri la pagina */
+    background-repeat: no-repeat; /* Non ripetere l'immagine */
+    min-height: 100vh; /* Assicura che l'immagine copra tutta la schermata */
+}
+
+/* Titolo */
+header h1 {
+    font-family: 'Press Start 2P', sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 3rem;  /* Imposta la dimensione delle lettere */
+    display: inline-flex; /* Imposta l'header come flex container per mantenere tutto sulla stessa riga */
+    align-items: center; /* Allinea l'icona e il testo al centro */
+    justify-content: center; /* Mantiene il contenuto centrato */
+    gap: 10px; /* Aggiungi un piccolo spazio tra il titolo e le icone */
+    text-shadow: 2px 2px 4px #000000, -2px -2px 4px #000000, 2px -2px 4px #000000, -2px 2px 4px #000000; /* Bordo nero intorno al testo */
+}
+
+/* Aggiungi lo stile per l'icona della palla da basket */
+.title-icon {
+    font-size: 2rem; /* Puoi regolare la dimensione dell'icona */
+}
+/* Sotto-header */
+.sotto-header {
+    background-color:#f35d12;
+}
+
+/* Pulsanti */
+.btn {
+    color: white;
+    border: 1px solid white; /* Bordo bianco */
+    background-color: #f77f00; /* Colore di background (arancione scuro) */
+}
+
+.btn:hover {
+    background-color: #e67e22; /* Colore al passaggio del mouse (arancione più chiaro) */
+}
+
+/*Stile per la breadcrumb*/
+.breadcrumb {
+    margin-left: 20px; /* Margine a sinistra per la breadcrumb */
+}
+.breadcrumb-item a {
+    color: #f77f00; /* Colore del link "Home" */
+}
+.breadcrumb-item.active {
+    color: white; /* Colore del testo successivo*/
+}
+.breadcrumb-item + .breadcrumb-item::before {
+    color: white; /* Colore della barra ("/") */
+}
+/*Overlay della home*/
+/* Sezione Introduzione */
+.intro-section {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+    box-sizing: border-box;
+    border-bottom: 5px solid #f77f00; 
+    height: 500px; /* Altezza della sezione */
+}
+
+/* Sovrapposizione per contrasto con il testo */
+.intro-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Sovrapposizione scura per migliorare la leggibilità */
+    padding: 50px 0;
+}
+
+/* Sottotitolo */
+.intro-section h2 {
+    font-size: 3rem;
+    font-family: 'Press Start 2P', cursive;
+    font-weight: bold;
+    color: #f77f00; /* Colore arancione per il titolo */
+    margin-bottom: 20px;
+}
+
+/* Paragrafo descrittivo */
+.intro-section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    font-weight: 400;
+    margin: 0 auto;
+    max-width: 800px; /* Limita la larghezza per migliorare la leggibilità */
+}
+
+/* Stile per il testo in grassetto */
+.intro-section p strong {
+    color: #f77f00; /* Colore arancione per il testo evidenziato */
+    font-weight: 700;
+}
+
+/* Effetto di hover sui titoli */
+.intro-section h2:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+/* Titolo Giochi Consigliati */
+.giochi-consigliati-title {
+    font-size: 3rem;
+    font-family: 'Press Start 2P', cursive;
+    font-weight: bold;
+    color: #f77f00; /* Colore arancione */
+    text-align: center; /* Centro il testo */
+    margin-bottom: 40px;
+    -webkit-text-stroke: 2px black; /* Bordo nero */
+    text-shadow: 2px 2px 4px white; /* Ombra bianca */
+}
+
+
+/*Sezione news nella home*/
+.news-section {
+    background-color: #f77f00;
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+.news-box {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 20px;
+}
+
+.news-box:hover {
+    transform: scale(1.05);
+}
+
+.news-box h3 {
+    font-size: 1.2rem;
+    color: #f77f00;
+    margin-bottom: 10px;
+}
+
+.news-box p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.news-box a {
+    margin-top: 10px;
+    display: inline-block;
+    font-weight: bold;
+    color: #fff;
+    background-color: #f77f00;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.news-box a:hover {
+    background-color: #ff7f00;
+}
+
+/* Footer - Sezione contatti e social */
+footer {
+    background-color: #f35d12;
+    color: white;
+    padding: 40px 0;
+}
+
+footer h4 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #f77f00;
+}
+
+/* Ingrandisci le icone dei social al passaggio del mouse */
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    footer .row {
+        text-align: center;
+    }
+}
+
+
+/* Solo nella pagina con l'ID "storia-nba" applica questi stili */
+#storia-nba body, 
+#storia-nba h1, 
+#storia-nba h2, 
+#storia-nba h3 {
+    color: #000000; /* Colore del testo nero */
+    text-shadow: 2px 2px 4px #ffffff, -2px -2px 4px #ffffff, 2px -2px 4px #ffffff, -2px 2px 4px #ffffff; /* Ombra bianca intorno al testo */
+}
+
+/*Css della pagina giochi*/
+/* Stile per la sezione dei giochi */
+#game-list {
+    display: flex;
+    flex-wrap: wrap; /* Permette alle card di andare su più righe */
+    gap: 20px; /* Aggiunge spazio tra le card */
+    margin: 0; /* Rimuove margini aggiuntivi */
+    padding: 0; /* Rimuove padding extra */
+}
+
+/* Rimuoviamo le impostazioni di larghezza fissa per la card */
+#game-list .card-game {
+    flex: 1 1 calc(50% - 20px); /* Ogni card occupa il 50% della larghezza con un gap di 20px */
+    box-sizing: border-box; /* Assicura che padding e margini siano inclusi nelle dimensioni */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: auto; /* Altezza dinamica */
+    padding: 15px; /* Padding per una spaziatura visiva migliore */
+    display: flex;
+    flex-direction: column; /* Assicura che i contenuti all'interno siano distribuiti correttamente */
+}
+
+/* Effetto hover per la card */
+.card-game:hover {
+    transform: translateY(-5px); /* Aggiunge un effetto di sollevamento */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Aumenta l'ombra durante l'hover */
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 1.2rem;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+.card-footer {
+    text-align: right;
+}
+
+.card-img-top {
+    width: 100%;  /* Fa sì che l'immagine riempia tutta la larghezza della card */
+    object-fit: cover;  /* Adatta l'immagine alla dimensione della card senza deformarla */
+}
+
+@media (max-width: 768px) {
+    #game-list {
+        grid-template-columns: 1fr;  /* Una sola colonna su schermi piccoli */
+    }
+}
+
+/* Stile per il blocco arancione del menu filtri */
+.filter-box {
+    background-color: #FFA500; /* Colore arancione */
+    padding: 20px; /* Spaziatura interna */
+    border-radius: 8px; /* Bordo arrotondato */
+    margin-bottom: 20px; /* Distanza tra i menu e la barra di ricerca */
+}
+
+/* Stile per il blocco arancione della barra di ricerca */
+.filter-box-search {
+    background-color: #FFA500; /* Colore arancione */
+    padding: 15px; /* Spaziatura interna */
+    border-radius: 8px; /* Bordo arrotondato */
+}
+
+/* Modifica della label all'interno del rettangolo */
+.filter-box .form-label,
+.filter-box h5,
+.filter-box-search .form-label {
+    color: white; /* Colore del testo delle etichette */
+    font-weight: bold; /* Grassetto per le etichette */
+}
+
+/* Modifica degli input e select */
+.filter-box .form-control,
+.filter-box-search .form-control {
+    border: 1px solid #FF8C00; /* Colore del bordo dell'input */
+    background-color: white; /* Colore di sfondo dell'input */
+}
+
+.filter-box .form-control:focus,
+.filter-box-search .form-control:focus {
+    border-color: #FF6600; /* Colore del bordo al focus */
+    box-shadow: 0 0 5px rgba(255, 165, 0, 0.5); /* Effetto ombra al focus */
+}
+
+/* Modifica delle checkbox */
+.filter-box .form-check-label,
+.filter-box-search .form-check-label {
+    color: white; /* Colore delle etichette delle checkbox */
+}
+
+.filter-box .form-check-input:checked {
+    background-color: #FF8C00; /* Colore della checkbox selezionata */
+    border-color: #FF8C00; /* Colore del bordo della checkbox */
+}
+
+/* Posizionamento relativo per il blocco dei filtri */
+.col-md-3 {
+    position: relative;
+    top: 45px; 
+}
+
+/*Riquadro arancione sotto le scritte nella sezione storia*/
+.riquadro-arancione {
+    background-color: #f77f00; /* Colore di sfondo arancione */
+    border-radius: 10px; /* Bordo stondato */
+    padding: 15px; /* Spaziatura interna */
+    color: white; /* Colore del testo */
+    margin-top: 15px; /* Distanza tra il testo e il riquadro */
+}
+img {
+    max-width: 100%; /* Garantisce che l'immagine non esca dal contenitore */
+    height: auto; /* Mantiene le proporzioni dell'immagine */
+    border-radius: 10px; /* Rende le immagini stondate come i riquadri */
+}
+
+/* Carosello */
+.carousel-inner {
+    max-height: 1440px; /* Imposta una dimensione fissa per l'altezza */
+}
+
+.carousel-image-container {
+    background-color: #FFA500; /* Colore di sfondo arancione */
+    border: 3px solid #FF8C00; /* Bordo arancione */
+    padding: 10px; /* Spazio tra il bordo e l'immagine */
+    border-radius: 15px; /* Bordo arrotondato */
+    height: 450px; /* Imposta l'altezza fissa del contenitore per le immagini */
+    overflow: hidden; /* Nasconde le immagini che escono dal contenitore */
+}
+
+.carousel-inner img {
+    object-fit: cover; /* Adatta le immagini al contenitore mantenendo le proporzioni */
+    height: 100%; /* Le immagini si adattano alla dimensione del contenitore */
+    width: 100%; /* Assicura che l'immagine occupi tutta la larghezza */
+}
+
+/* Controlli del carosello */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #f77f00; /* Colore delle frecce */
+    font-weight: bold; /* Grassetto per le frecce */
+    border-radius: 50%; /* Rendi le frecce circolari */
+    width: 50px;
+    height: 50px;
+    border: 5px solid #FF8C00; /* Colore bordo che ricorda il basket */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Aggiungi una piccola ombra */
+    position: absolute; /* Posiziona le frecce rispetto al contenitore */
+    top: 50%; /* Posiziona le frecce al centro verticale */
+    transform: translateY(-50%); /* Allinea esattamente al centro verticale */
+    z-index: 10; /* Assicurati che le frecce siano sopra il contenuto */
+}
+
+.carousel-control-prev-icon {
+    left: 170px; /* Distanza dalla sinistra del carosello */
+}
+
+.carousel-control-next-icon {
+    right: 170px; /* Distanza dalla destra del carosello */
+}
+
+/* Assicurati che il carosello sia sopra il contenuto */
+.carousel-container {
+    margin-bottom: 50px; /* Margine inferiore per separare dal contenuto sottostante */
+}
+
+
+/*Sezione commenti*/
+/* Contenitore per il quadrato con commento */
+.comment-input-container {
+    background-color: #f77f00;
+    border-radius: 15px;
+    padding: 20px;
+    color: white;
+    height: 350px;
+    overflow-y: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra per un effetto realistico */
+}
+
+/* Stile per i commenti nel rettangolo bianco */
+.comment-box {
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 15px;
+    color: #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Aggiunge un'ombra per un effetto realistico */
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-box h4 {
+    font-weight: bold;
+    color: #f77f00;
+    margin-bottom: 10px;
+    display: none;
+}
+
+.comment-box p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.comment-box .like-dislike-buttons {
+    display: flex;
+    justify-content: flex-end; /* Allinea i bottoni a destra */
+    gap: 15px; /* Aggiunge spazio tra i bottoni */
+    align-items: center; /* Allinea verticalmente i bottoni */
+}
+
+.comment-box .like-dislike-buttons button {
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    display: inline-block;
+}
+
+.comment-box .like-dislike-buttons button:hover {
+    color: #f77f00;
+}
+
+.orange-rectangle {
+    height: 6px;
+    background-color: #f77f00;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Aggiunta di un effetto hover sugli input */
+#username, #commentText {
+    transition: background-color 0.3s ease;
+}
+
+#username:focus, #commentText:focus {
+    background-color: #fff3e0; /* Cambia colore di sfondo quando il campo è attivo */
+    border-color: #f77f00;
+}
+
+/* Nuovo stile per il nome utente */
+.comment-box .username {
+    font-weight: bold;
+    color: #f77f00;
+    margin-bottom: 5px; /* Spazio sotto il nome utente */
+}
+
+/* Stile per il commento */
+.comment-box .comment-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Aggiungi un po' di spazio sopra il rettangolo arancione */
+.orange-rectangle {
+    height: 6px;
+    background-color: #f77f00;
+    border-radius: 5px;
+    margin-top: 20px; /* Aggiunge più spazio sopra */
+    display: none ;
+}
+
+/* Stile per la sezione descrizioni */
+.description-section {
+    padding: 40px;
+    background-color: #FF8C00;
+    border-radius: 15px; /* Bordi stondati */
+    border: 3px solid #FF8C00; /* Bordo arancione */
+    margin: 70px; /* Aggiunge un margine dai lati */
+}
+
+.description-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.description-section p {
+    text-align: justify;
+}
+
+/* Stili per la mappa */
+/* Stile per il container della mappa */
+.map-container {
+    width: 90%; /* Larghezza del container */
+    max-width: 800px; /* Larghezza massima */
+    margin: 20px auto; /* Centra il container */
+    border-radius: 20px; /* Bordi arrotondati */
+    overflow: hidden; /* Nasconde gli angoli della mappa */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Ombreggiatura */
+}
+
+/* Applica un border-radius all'iframe della mappa */
+iframe {
+    border-radius: 15px;  /* Imposta il raggio di curvatura dei bordi */
+    overflow: hidden;      /* Nasconde gli angoli che potrebbero fuoriuscire */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);  /* Aggiunge una leggera ombra intorno all'iframe */
+    width: 100%;           /* Imposta la larghezza della mappa al 80% del contenitore */
+    height: 500px;        /* Imposta l'altezza della mappa a 500px */
+    margin: 0 auto;       /* Centra l'iframe orizzontalmente */
+}
+
+/* Opzionale: se desideri aggiungere margine per distanziare l'iframe */
+.container {
+    margin-bottom: 30px;  /* Aggiunge margine sotto il contenitore */
+}
+
+/*Stile per la scritta sopra la mappa*/
+.interesse {
+    color: #f77f00; /* Colore del testo */
+    font-weight: bold; /* Testo in grassetto */
+    text-shadow: 2px 2px 4px #fff; /* Ombra bianca (con sfumatura) */
+    -webkit-text-stroke: 1px black; /* Bordo nero attorno al testo */
+    font-size: 56px; /* Ingrandisce la scritta */
+}
+
+
+
+
+
+
+/* Stile per i box dei giochi consigliati */
+.game-box {
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #f77f00;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Aggiungi l'effetto hover */
+.game-box:hover {
+    transform: scale(1.05); /* Aumenta leggermente la dimensione al passaggio del mouse */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Aggiunge una leggera ombra */
+}
+
+/* Non fare l'immagine trasparente durante l'hover */
+.game-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Posizionare il titolo sotto l'immagine in un rettangolo arancione */
+.game-box h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #f77f00; /* Colore di sfondo arancione */
+    color: white;
+    padding: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    border-radius: 0 0 10px 10px; /* Angoli arrotondati in basso */
+}
+
+/* Rendi l'immagine all'interno dei box cliccabile */
+.game-box-link {
+    display: block;
+    text-decoration: none; /* Rimuove il sottolineato dal link */
+}
+
+
+/*Inizio sezione metacritic nelle schede dei giochi*/
+.metacritic-box {
+    position: relative;
+    background: url('https://www.destructoid.com/wp-content/uploads/2020/12/597919-metacritic-review-bombing.jpg?fit=1000%2C661') center center no-repeat;
+    background-size: cover; /* Adatta l'immagine al box */
+    background-position: center;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Sovrapposizione trasparente */
+.metacritic-box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8); /* Aggiunge un overlay trasparente scuro */
+    z-index: 1; /* Sovrappone l'overlay sopra l'immagine */
+    border-radius: 15px; /* Mantiene il bordo arrotondato */
+}
+
+/* Rendi il testo visibile sopra l'overlay */
+.metacritic-title, .metacritic-score {
+    position: relative;
+    z-index: 2; /* Assicura che il testo appaia sopra l'overlay */
+    color: white; /* Colore del testo bianco */
+}
+
+/* Aggiungi un'ombra al testo per migliorare la visibilità */
+.metacritic-title {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.metacritic-score {
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Ombra per migliorare la visibilità */
+}
+/*Fine sezione metacritic nelle schede dei giochi*/
+
+/*Inizio della sezione timeline*/
+/* Stile generale della timeline */
+.timeline {
+    position: relative;
+    width: 100%;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Barra centrale arancione più spessa */
+.timeline-line {
+    position: absolute;
+    top: 0;
+    left: 49.5%;
+    width: 15px; /* Più spessa della barra */
+    height: 100%;
+    background-color: #f77f00;
+    z-index: 0;
+}
+
+/* Contenitore per il rettangolo con l'anno */
+.year-container {
+    background-color: #f77f00; /* Sfondo arancione */
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    z-index: 1;
+    text-align: center; /* Centra il testo */
+    position: absolute; /* Posizione assoluta sopra l'immagine */
+    top: -40px;  /* Distanza dalla linea temporale (puoi modificarlo) */
+    left: 50%;
+    transform: translateX(-50%); /* Centra orizzontalmente rispetto alla timeline */
+}
+
+/* Anno scritto in bianco dentro il rettangolo */
+.year {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Contenitore dell'evento (immagine a destra o sinistra) */
+.timeline-event {
+    position: relative;
+    width: 80%;
+    margin: 30px 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* Le immagini devono essere larghe un po' più piccole */
+.timeline-event img {
+    max-width: 500px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Posizionamento delle immagini */
+.timeline-event .right {
+    margin-left: 800px;
+}
+
+.timeline-event .left {
+    margin-right: 800px;
+}
+
+/* Gestire il layout alternato a destra e a sinistra */
+.timeline-event .right img {
+    float: right;
+}
+
+.timeline-event .left img {
+    float: left;
+}
+
+/* Pulizia dei float */
+.timeline-event img {
+    clear: both;
+}
+
+/*Stile della pagina about*/
+.content-box {
+    background-color: #f77f00;
+    border-radius: 15px;
+    padding: 20px;
+    color: white;
+}
+.content-box a {
+    color: black;
+    text-decoration: underline;
+}
+.content-box a:hover {
+    color: #ffd166;
+}
+
+

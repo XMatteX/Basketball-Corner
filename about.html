@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Basket, videogioco, pallacanestro, videogame, recensione, NBA, NBA 2k, NBA Live">
+    <title>About</title>
+
+    <!-- Dublin Core Metadata -->
+    <meta name="DC.Title" content="About"/>
+    <meta name="DC.Creator" content="Matteo Damaschi"/>
+    <meta name="DC.Subject" content="Web Project Plan"/>
+    <meta name="DC.Description" content="Descrizione e spiegazione dei vari passaggi che hanno portato alla realizzazione del sito."/>
+    <meta name="DC.Publisher" content="Basketball Corner"/>
+    <meta name="DC.Contributor" content="Matteo Damaschi"/>
+    <meta name="DC.Date" content="2025-03-18"/>
+    <meta name="DC.Type" content="Testo informativo, Immagini"/>
+    <meta name="DC.Format" content="text/html"/>
+    <meta name="DC.Identifier" content="https://www.Basketball-Corner.it/about"/>
+    <meta name="DC.Source" content=""/>
+    <meta name="DC.Language" content="it"/>
+    <meta name="DC.Relation" content="https://www.Basketball-Corner.com/index.html"/>
+    <meta name="DC.Rights" content="© 2025 Basketball Corner. Tutti i diritti riservati."/>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+ 
+
+    <body>     
+        <header class="text-white p-3" style="background-color: #f77f00;">
+            <div class="container d-flex justify-content-between">
+                <h1>Web Project Plan</h1>
+                <div class="dropdown">
+                    <button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                        Menu
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <li><a class="dropdown-item" href="index.html">Home</a></li>
+                        <li><a class="dropdown-item" href="giochi.html">Giochi</a></li>
+                        <li><a class="dropdown-item" href="softwarehouse.html">Sviluppatori</a></li>
+                        <li><a class="dropdown-item" href="storia.html">Storia della NBA</a></li>
+                        <li><a class="dropdown-item" href="Commenti.html">Commenti</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+
+           <!-- Sotto header con la breadcrumb -->
+        <div class="text-white py-0.5 " style="background-color: black;">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">About</li>
+                </ol>
+            </nav>
+        </div>
+
+        <div class="container mt-4">
+            <div class="content-box">
+                <h2>Indice:</h2>
+                <ul>
+                    <li><a href="#idea">Idea (Abstract)</a></li>
+                    <li><a href="#brief">1. Brief (Pianificazione)</a></li>
+                    <li><a href="#benchmark">2. Benchmark (Esistente e Competitors)</a></li>
+                    <li><a href="#struttura">3. Struttura (Mappa, Schema e Categorie)</a></li>
+                    <li><a href="#layout">4. Layout (Architettura e Wireframes)</a></li>
+                    <li><a href="#usabilita">5. Usabilità (Efficacia, Grafica e Tipografia)</a></li>
+                    <li><a href="#servizi">6. Servizi (Browsing e Interazione)</a></li>
+                    <li><a href="#bibliografia">7. Bibliografia e Sitografia di Progetto</a></li>
+                </ul>
+            </div>
+        
+            <div class="content-box mt-4">
+                <h3 id="idea">Idea (Abstract)</h3>
+                <p style="text-align: justify;">
+                    La mia idea per questo sito nasce da un'esperienza personale di qualche anno fa. Dopo aver giocato per anni alla Wii ho comprato un Pc abbastanza
+                    potente da supportare giochi di ultima generazione e mi sono chiesto se esistessero altri giochi validi sulla pallacanestro, essendo io un appassionato,
+                    oltre alla serie NBA 2k. Così mi sono messo a cercare su internet e ho trovato tantissimi siti che trattavano nello specifico videogiochi di calcio ma
+                    nessuno che trattasse la pallacanestro, in particolare in lingua italiana. Allora partendo da questa idea ho deciso di creare un sito che trattasse 
+                    l'argomento in modo preciso e puntuale ma senza fornire tante informazioni inutili e poco interessanti come avviene negli store digitali (in cui tra l'altro
+                    di norma si trovano informazioni esclusivamente sui giochi recenti) il tutto realizzato con un design moderno ma che strizzi un occhio al passato.
+                </p>
+                
+                <h3 id="brief">1. Brief (Pianificazione)</h3>
+                <p style="text-align: justify;">
+                    Una volta descritta l'idea sono passato a decidere quali sono le finalità, le modalità di accesso e il pubblico a cui il sito si rivolge. Vediamole 
+                    qui di seguito.
+                </p>
+                <h4>1.1 Finalità:</h4>
+                <p style="text-align: justify;">
+                   L'obiettivo del progetto è creare un sito web dedicato al mondo dei videogiochi che riguardano esclusivamente la pallacanestro, con un focus
+                   particolare sulle due serie più famose che sono NBA 2k e NBA live più approfondimenti su altri titoli. Il sito offrirà informazioni dettagliate 
+                   sui giochi, le loro caratteristiche, la storia delle software house e permetterà agli utenti di interagire lasciando dei commenti. La finalità 
+                   principale è fornire una risorsa centralizzata per gli appassionati sia del mondo della pallacanestro che del mondo dei videogiochi, migliorando 
+                   l'accessibilità alle informazioni e favorendo l'interazione tra gli utenti.
+                </p>
+                <h4>1.2 Pubblico:</h4>
+                <p style="text-align: justify;">
+                    Il target di riferimento include:
+                   <ul>
+                       <li>Appassionati di videogiochi sportivi, in particolare di titoli NBA 2K e affini.</li>
+                       <li>Giocatori che cercano recensioni e opinioni prima di acquistare un gioco.</li>
+                       <li>Appassionati di pallacanestro che amano passare il proprio tempo libero giocando ai videogiochi.</li>
+                       <li>Persone che desiderano condividere commenti e interagire con altri utenti della community.</li>
+                    </ul>
+                    Gli utenti potranno accedere ai contenuti attraverso diverse sezioni del sito, tra cui pagine dedicate ai giochi, recensioni, una sezione storica 
+                    e un'area per i commenti.
+                </p>
+                <h4>1.3 Accesso:</h4>
+                <p style="text-align: justify;">
+                    Il sito web sarà accessibile da diverse piattaforme (PC, tablet, smartphone) grazie a un design responsive. La comunicazione avverrà attraverso 
+                    testi, immagini e possibili contenuti multimediali (video, audio, mappe navigabili) per migliorare l'esperienza utente. Sarà inoltre presente una 
+                    struttura di navigazione intuitiva per facilitare l'esplorazione dei contenuti.
+                </p>
+                <h4>1.4 Contenuti e dati:</h4>
+                <p style="text-align: justify;">
+                    I contenuti presenti nel sito provengono da diverse fonti:
+                    <ul>
+                        <li>Informazioni estratte da fonti online attendibili sul mondo del gaming.</li>
+                    	<li>Contenuti originali, come approfondimenti storici scritti dagli amministratori.</li>
+                    	<li>Contributi degli utenti tramite commenti e discussioni.</li>
+                    	<li>Materiale multimediale, come immagini e video legati ai giochi trattati.</li>
+                    	<li>Articoli online delle case di sviluppo riguardanti i giochi trattati nel sito.</li>
+                    </ul>                
+                L'obiettivo è quello di garantire un'esperienza ricca e coinvolgente per gli utenti, mantenendo un elevato livello di qualità nelle informazioni fornite.
+                </p>
+                
+                <h3 id="benchmark">2. Benchmark (Esistente e Competitors)</h3>
+                <p style="text-align: justify;"> 
+                    Dopo aver descritto l'idea, il pubblico a cui si rivolge il sito e le sue finalità passiamo a una breve sezione dedicata all'analisi della concorrenza.
+                <h4>2.1: Analisi di mercato</h4>
+                <p style="text-align: justify;">                    	
+                    Esistono diversi siti web dedicati al mondo dei videogiochi di basket, in particolare alla serie NBA 2K. Tuttavia, molti di questi si concentrano su 
+                    aspetti specifici come il fantabasket o le notizie generali sul basket, senza offrire una piattaforma completa che integri informazioni dettagliate 
+                    sui giochi di serie diverse, informazioni sulle software house, e la possibilità di esplorare una timeline con i videogiochi di pallacanestro più 
+                    iconici. Pertanto, ritengo che ci sia  spazio nel mercato per un nuovo sito che combini questi elementi, fornendo una risorsa centralizzata e completa 
+                    per gli appassionati. 
+                </p>
+                <h4>2.2: Servizi presenti in progetti esistenti riutilizzabili</h4>
+                <p style="text-align: justify;">   
+                    Alcuni servizi presenti in progetti esistenti che potrebbero essere integrati nel nostro sito includono:
+                    <ul>
+                        <li>Fantabasket: La possibilità per gli utenti di creare e gestire squadre virtuali basate sulle performance dei giocatori reali, come offerto da piattaforme come Dunkest e Sotto Canestro.</li> 
+                        <li>Statistiche dettagliate: Fornire statistiche aggiornate e dettagliate sui giocatori e sulle squadre, migliorando l'esperienza utente e l'interazione.</li>
+                        <li>Sezione podcast: Creare spazi dedicati al caricamento di discussioni registrate tra esperti del settore col fine di fornire agli utenti approfondimenti che possano risultare interessanti.</li>
+                    </ul>
+                </p>
+                <h4>2.3: Analisi di due siti web concorrenti</h4>
+                <p style="text-align: justify;">
+                <a href="https://www.dunkest.com" target="_blank">Dunkest</a>
+                <br>Dunkest è un portale online dedicato al fantabasket, che consente agli utenti di creare e gestire squadre virtuali composte da giocatori reali della 
+                    NBA, Euroleague e LBA. Il gioco si basa sulle performance reali dei giocatori, offrendo un'esperienza coinvolgente per gli appassionati. Le 
+                    principali caratteristiche di Dunkest includono: 
+                    <ul>
+                    	<li>Creazione e gestione squadre: Gli utenti possono creare il proprio roster scegliendo tra i giocatori reali, con la possibilità di effettuare scambi e sostituzioni durante la stagione.</li> 
+                    	<li>Punteggi basati su statistiche reali: Il punteggio delle squadre virtuali è determinato dalle performance reali dei giocatori scelti, rendendo il gioco dinamico e aderente alla realtà.</li> 
+                    	<li>Leghe e competizioni: Oltre alla lega generale, gli utenti possono partecipare a leghe private con amici e competere in tornei e coppe interne.</li> 
+                    </ul>
+                    Tuttavia, Dunkest si focalizza principalmente sull'aspetto del fantabasket, offrendo meno contenuti informativi sui giochi stessi o sulle software house che li producono. 
+                <br><a href="https://it.wikipedia.org/wiki/Categoria:Videogiochi_di_pallacanestro" target="_blank">Wikipedia - Sezione Giochi di Basket</a>                    
+                <br>Wikipedia contiene una sezione dedicata ai videogiochi di basket, che offre un elenco di titoli rilasciati nel corso degli anni. Tuttavia, questa sezione presenta alcune limitazioni significative:
+                    <ul>
+                    	<li>La pagina presenta esclusivamente un elenco di giochi: La sezione si limita a elencare i vari titoli disponibili, senza fornire informazioni dettagliate su ciascuno di essi.</li>
+                    	<li>Mancanza di interazione: Non esiste una community attiva in cui gli utenti possano scambiarsi opinioni, condividere esperienze o discutere delle caratteristiche dei giochi.</li>
+                    	<li>Totale assenza di informazioni su aggiornamenti e novità: Wikipedia non fornisce aggiornamenti su patch, DLC o nuove uscite, rendendo il sito poco utile per chi cerca informazioni sempre aggiornate.</li>
+                    </ul>
+                </p>
+                <h4>2.4: Conclusione</h4>    
+                <p style="text-align: justify;">
+                    Sebbene esistano piattaforme dedicate al fantabasket e alla gestione di squadre virtuali, manca un sito che offra una visione completa e integrata 
+                    del mondo dei videogiochi di basket, includendo informazioni dettagliate sui giochi e la presenza di una sezione dedicata alla community. Questo 
+                    progetto mira a colmare questa lacuna, creando una risorsa unica e completa per gli appassionati del settore.
+                </p>
+                
+                <h3 id="struttura">3. Struttura (Mappa, Schema e Categorie)</h3>
+                <p style="text-align: justify;">
+                    In questa sezione descriverò tramite schemi e mappe concettuali lo scheletro del sito e le relazioni che sono presenti tra le pagine html che lo compongono.
+                </p>
+                <h4>3.1: Mappa concettuale</h4> 
+                <img src="Immagini/Mappa concettuale.jpeg" alt="Mappa concettuale" style="display: block; margin: 0 auto;">
+                <p style="text-align: justify;">
+                    L'idea dietro a questa mappa concettuale è quella di voler rappresentare tutto ciò che gravita attorno a un videogioco di pallacanestro. Sono 
+                    partito ragionando riguardo al fatto che se esiste un videogioco è perché qualcuno lo ha progettato, quindi ho fatto delle ricerche online e ho 
+                    selezionato i quattro leader del settore (per una questione di tempo sennò le aziende che occupano questo settore sono decine). Poi ho pensato che 
+                    se esistono i videogiochi sulla pallacanestro è grazie alla popolarità della NBA che ha contribuito a rendere la pallacanestro uno degli sport più 
+                    seguiti al mondo e allora ho reputato doveroso inserire un accenno storico a riguardo. Però parlare solamente di videogioco è troppo generico allora 
+                    sono passato a definire le categorie principali in cui si possono classificare i vari titoli, ma ciò fa nascere anche la necessita di ordinare e 
+                    classificare i giochi e quindi ho inserito anche le varie possibilità di classificazione dei giochi. Infine, ho pensato che, come in ogni mercato, i 
+                    rating e l’opinione del pubblico è centrale, dunque, ho distinto i modi in cui un videogioco può essere giudicato poiché il giudizio che riceve 
+                    potrebbe avere un grosso impatto sulle vendite.
+                </p>
+                <h4>3.2: Schema delle dipendenze</h4> 
+                <img src="Immagini/Schema delle dipendenze.jpeg" alt="Schema delle dipendenze" style="display: block; margin: 0 auto;">
+                <p style="text-align: justify;">
+                    Questo schema serve per descrivere a livello gerarchico come ho pensato le pagine del sito e che interazione c’è tra loro. La home è la pagina 
+                    attorno a cui ruotano tutte le altre, attraverso i pulsanti presenti nel sotto header e ai riquadri cliccabili è possibile accedere a tutte le aree 
+                    del sito. Ho quindi collegato la pagina index html a tutte le altre, inserendo in ogni pagina (escluse quelle dei singoli giochi specifici), oltre 
+                    alla breadcrumps che permette di tornare direttamente alla home , un menu a tendina in alto a destra per potersi muovere tra le varie pagine. Ho poi 
+                    rappresentato e desctitto brevemente le pagine relative al login, alla storia della NBA, al Web Project Plan e alla pagina sugli sviluppatori, 
+                    concentrandomi successivamente sulla pagina dei giochi e sulle sezioni giochi consigliati e news che hanno una gerarchia più complessa rispetto alle 
+                    altre pagine in quanto la pagina dei giochi permette di aprire le pagine dei singoli giochi e la timeline con le immagini, aggiungendo così un 
+                    livello alla gerarchia, la stessa cosa vale per la sezione giochi consigliati. Infine, mi sono concentrato sulla gerarchia relativa alla sezione 
+                    news che permette di accedere agli articoli presenti su altri siti internet.
+                </p>
+                <h4>3.3: Categorie</h4> 
+                <p style="text-align: justify;">
+                    Per organizzare in modo efficace la collezione di giochi di pallacanestro presenti nel sito, è necessario stabilire delle etichette descrittive per ogni oggetto della collezione. Queste etichette permettono di categorizzare e identificare ogni gioco in maniera chiara e strutturata.
+                    Le principali etichette descrittive di ciascun gioco includono:
+                    <ul>
+                        <li>Titolo (title): Il nome ufficiale del videogioco. </li>
+                        <li>Anno di rilascio (year): L'anno in cui il gioco è stato pubblicato. </li>
+                        <li>Piattaforme disponibili: Elenco delle piattaforme su cui è disponibile il gioco. </li>
+                        <li>Punteggio Metacritic (metacritic): Valutazione critica basata su recensioni specializzate. </li>
+                        <li>Descrizione (description): Breve riassunto delle caratteristiche principali del gioco. </li>
+                        <li>Innovazioni introdotte: Breve sezione che descrive le novità tecniche e di gameplay introdotte da ciascun gioco.</li>
+                        <li>Immagine (image): Anteprima visiva del gioco tramite un'immagine rappresentativa. </li>
+                    </ul>   
+                    Queste etichette consentono di gestire al meglio la collezione, facilitando la ricerca e la consultazione dei giochi disponibili.
+                </p>
+                
+                <h3 id="layout">4. Layout (Architettura e Wireframes)</h3>
+                <p style="text-align: justify;">
+                    In questa sezione inserirò i Wireframes che descrivono l'architettura delle singole pagine html, per rendere evidente il funzionamento di tutte le 
+                    componenti del sito.
+                </p>
+                <h4>4.1: Wireframe index</h4> 
+                <img src="Immagini/Wireframe index.png" alt="Wireframe index" style="display: block; margin: 0 auto;">
+                <p style="text-align: justify;">
+                    Il Wireframe rappresenta il layout della home. Appena si accede al sito, nella prima sezione, si viene accolti da un'intestazione chiara e ben 
+                    organizzata, che include il nome della pagina e subito sotto un menu di navigazione con i pulsanti che permettono di accedere alle diverse sezioni: 
+                    Giochi, Commenti, Sviluppatori, Storia della NBA, About e Login. Ciò permette agli utenti di esplorare facilmente i contenuti disponibili.
+                <br>
+                <br>Al centro della pagina è posizionato un messaggio di benvenuto, messo lì per attirare subito l’attenzione dei lettori, che introduce il tema 
+                principale del sito. Subito sotto, c’è la sezione relativa ai giochi consigliati, con i tre titoli scelti dalla redazione che sono: NBA 2K25, NBA Live 
+                2003 e FIBA Basketball Manager 2K23. Questa sezione è pensata per guidare gli utenti verso i migliori videogiochi di basket disponibili al momento della 
+                lettura.
+                <br>
+                <br>Più in basso, è presente uno spazio dedicato alle ultime news, che fornisce aggiornamenti sul mondo del basket virtuale, con un occhio di riguardo 
+                    verso nuove uscite o eventi legati ai giochi.
+                <br>
+                <br>Infine, il footer del sito offre informazioni importanti, tra cui link alla Privacy Policy e alla Normativa Cookies, i canali social relativi al 
+                sito e la possibilità di iscriversi alla piattaforma per rimanere aggiornati sulle novità.
+                </p>
+
+                <h4>4.2: Wireframe pagina dei giochi</h4> 
+                <img src="Immagini/Wireframe Giochi.png" alt="Wireframe Giochi" style="display: block; margin: 0 auto;">
+                <p style="text-align: justify;">
+                    Il Wireframe rappresenta il layout della pagina dedicata al catalogo dei giochi. Appena si accede, la pagina presenta un'intestazione con il titolo, 
+                    accompagnato da un menu a tendina che consente di spostarsi tra le varie sezioni del sito, ossia la Home e le pagine Sviluppatori, Storia della NBA, 
+                    Commenti, About. Nel sotto header è posizionata la breadcrump che permette di ritornare alla home cliccando sul link.
+                <br>
+                <br>Subito sotto, è posizionato un sottotitolo con un pulsante che serve a visualizzare la timeline dei giochi, un elenco cronologico dei titoli disponibili 
+                    che andremo a esplorare nelle prossime sezioni relative ai Wireframe.
+                <br>
+                <br>Scendendo ancora nella pagina si trovano le card dei giochi e il menu dei filtri con annessa una barra di ricerca che permette di trovare un videogioco 
+                    specifico digitandone il nome. Nei menu è possibile filtrare i giochi sfruttando dei menu a tendina da cui selezionare una delle opzioni disponibili per ogni 
+                    piattaforma oppure per riordinare le card in base all’anno di uscita o al voto metacritic e, se non bastasse, ci sono delle checkbox per inserire dei filtri 
+                    più generali.
+                <br>
+                <br>Ogni card ha un pulsante scopri di più che consente di accedere alla pagina specifica del gioco. Nella parte inferiore della pagina troviamo diverse 
+                    schede dedicate ai giochi, con un pulsante "Scopri di più", che probabilmente permette di accedere a dettagli aggiuntivi su ogni titolo. 
+                    Sotto l'ultima riga di card è stata inserita una barra di paginazione per non dover scorrere in eterno, nel caso in cui venissero inseriti molti titoli,
+                    ma permettendo di scorrerli in pagine rendendo tutti i giochi più accessibili.
+                <br>
+                <br>Infine, il footer è identico a quello della home e di tutte le altre pagine.
+                </p>
+                <h4>4.3: Wireframe pagina timeline dei giochi</h4> 
+                <img src="Immagini/Wireframe Timeline.png" alt="Wireframe Timeline" style="display: block; margin: 0 auto;">
+                <p style="text-align: justify;">
+                    All’interno della pagina dedicata al catalogo dei giochi è presente un pulsante che consente di accedere a questa pagina, che è dedicata alla 
+                    timeline dei giochi. Come per tutte le altre pagine, appena si accede, la pagina presenta un'intestazione ma non è presente il menu a tendina che 
+                    consente di navigare nelle varie pagine del sito, però ho modificato la breadcrump che non consente solo di accedere alla home ma anche alla pagina 
+                    dei giochi cliccando sul link.
+                <br>
+                <br>Scorrendo si trova la vera e propria linea del tempo formata da una retta spessa centrale orientata verso il basso con gli anni inseriti centralmente 
+                    all’interno di riquadri. Le immagini dei vari giochi sono posizionate in modo da rientrare nel blocco relativo all’anno di uscita del titolo e sono sfasate 
+                    (una a destra e una a sinistra). 
+                <br>
+                <br>Infine, il footer è identico a quello della home e di tutte le altre pagine.
+                </p>
+                <h4>4.4: Wireframe pagina singolo gioco</h4> 
+                <img src="Immagini/Wireframe Singolo gioco.png" alt="Wireframe Singolo gioco" style="display: block; margin: 0 auto;">
+                <p style="text-align: justify;">
+                    Sempre nella pagina dedicata al catalogo dei giochi sono presenti le card dei singoli titoli che, se aperte, permettono di accedere alla pagina 
+                    contenente le informazioni del gioco. La pagina segue la struttura di quella della timeline, con il titolo e la breadcrump che permette di accedere 
+                    sia alla home che alla pagina dei giochi.
+                <br>
+                <br>Scendendo si trova sulla destra il riquadro che contiene tutte le informazioni e in fondo al quale è presente il video trailer del gioco, mentre 
+                    sulla sinistra si trovano l’immagine della copertina e sotto il voto metacritic parametrato in 100esimi.
+                <br>
+                <br>Infine, il footer è identico a quello della home e di tutte le altre pagine.
+                </p>
+                <h4>4.5: Wireframe pagina sviluppatori</h4>
+                <img src="Immagini/Wireframe Sviluppatori.png" alt="Wireframe Sviluppatori" style="display: block; margin: 0 auto;">
+                <p style="text-align: justify;">
+                    Passiamo ora al Wireframe che rappresenta il layout della pagina dedicata agli sviluppatori. Appena si accede, la pagina presenta un'intestazione 
+                    con il titolo e il solito menu a tendina che consente di navigare nelle varie pagine del sito. Subito sotto c’è la breadcrump uguale a quella delle 
+                    altre pagine che consente di tornare alla home cliccando sul link.
+                <br>
+                <br>Scorrendo la pagina si trova un carosello contenente le foto delle software-house, con subito sotto una breve descrizione e gli indirizzi delle sedi centrali.
+                <br>
+                <br>Ancora sotto è presente anche una sezione dedicata alla mappa dei punti di interesse, creata a mano da me tramite l’opzione di personalizzazione mappe di google 
+                    maps che consente di visualizzare le sedi delle case di produzione in una mappa interattiva.
+                <br>
+                <br>Infine, il footer è identico a quello della home e di tutte le altre pagine.
+                </p>
+                <h4>4.6: Wireframe pagina storia della NBA</h4> 
+                <img src="Immagini/Wireframe Storia.png" alt="Wireframe Storia" style="display: block; margin: 0 auto;">
+                <p style="text-align: justify;">
+                    Il Wireframe qui sopra rappresenta il layout della sezione Storia della NBA dove vengono fatti degli accenni storici riguardo a come la National 
+                    Basketball Association sia diventata la lega più famosa del mondo. 
+                <br>
+                <br>Appena si accede, la pagina presenta un'intestazione con il titolo e il solito menu a tendina che consente di navigare nelle varie pagine del sito. 
+                    Subito sotto c’è la breadcrump uguale a quella delle altre pagine che consente di tornare alla home cliccando sul link.
+                <br>
+                <br>Scorrendo verso il basso troviamo una sezione composta da una sequenza di paragrafi, ognuno dedicato a un decennio a partire dagli anni ’40 in cui 
+                    la lega venne fondata, e per ogni paragrafo è presente la foto del giocatore più iconico di quel decennio. Il tutto è disposto secondo un layout di 
+                    testo a destra e immagine a sinistra che riga dopo riga si invertono di posizione.
+                <br>
+                <br>Infine, il footer è identico a quello della home e di tutte le altre pagine.
+                </p>
+                <h4>4.7: Wireframe pagina commenti</h4> 
+                <img src="Immagini/Wireframe Commenti.png" alt="Wireframe Commenti" style="display: block; margin: 0 auto;">
+                <p style="text-align: justify;">
+                    Analizziamo ora il layout della pagina dei commenti. Come per tutte le altre pagine, appena si accede, la pagina presenta un'intestazione con il 
+                    titolo e il solito menu a tendina che consente di navigare nelle varie pagine del sito. Subito sotto c’è la breadcrump uguale a quella delle altre 
+                    pagine che consente di tornare alla home cliccando sul link.
+                <br>
+                <br>Scorrendo verso il basso troviamo i due riquadri dove inserire lo username e il proprio commento. Una volta pubblicati, i commenti compaiono sulla 
+                    destra con la possibilità di mettere like o dislike cliccando rispettivamente sul pollice in su o su quello in giù.
+                <br>
+                <br>Infine, il footer è identico a quello della home e di tutte le altre pagine.
+                </p>
+
+                <h3 id="usabilita">5. Usabilità (Efficacia, Grafica e Tipografia)</h3>
+                <p style="text-align: justify;">
+                    In questa sezione approfondirò elementi relativi al design grafico e alle scelte stilistiche del sito internet.
+                </p>
+                <h4>5.1: Architettura</h4> 
+                <p style="text-align: justify;">
+                    L'architettura del sito è progettata per garantire una navigazione intuitiva e una chiara suddivisione dei contenuti. Il layout è strutturato in sezioni ben definite, con un menu di navigazione principale che include:
+                    <ul> 
+                        <li>Home: Accesso rapido ai giochi consigliati e agli ultimi aggiornamenti.</li>
+                        <li>Catalogo dei giochi: Pagina dedicata ai vari titoli con schede dettagliate per ogni singolo videogioco.</li>
+                        <li>Sviluppatori: Pagina dedicata a fornire informazioni riguardo le software-house leader del mercato nello sviluppo di giochi sulla pallacanestro.</li>
+                        <li>Storia della NBA: Pagina dedicata al racconto delle varie fasi che hanno portato la NBA ad essere ciò che è oggi.</li>
+                        <li>Commenti: Sezione dove ogni utente può lasciare il proprio commento e mettere like/dislike a quelli degli altri.</li>
+                        <li>About: Pagina dedicata al Web Project Plan in cui gli utenti possono capire a fondo i vari passi dietro la realizzazione del sito che stanno consultando.</li>
+                    </ul> 
+                    A livello grafico ho deciso di inserire lo stesso footer in tutte le pagine sia per un motivo estetico che per portare il maggior numero di lettori
+                    a iscriversi alla newsletter e a cliccare sulle icone dei social. Inoltre ogni pagina (esclusa la home) ha la stessa breadcrumb che consente intuitivamente 
+                    di tornare alla home e un menu a tendina molto intuitivo che favorisce il passaggio da una pagina all'altra. Per le pagine con un numero di livelli di gerarchia
+                    superiore a due ho rimosso il menu a tendina e ho inserito la possibilià di tornare alla pagina precedente (dove invece il menu è presente) tramite la breadcrumb.
+                <br>
+                <br>Inoltre il sito è completamente responsivo, ho sfruttato Bootstrap e altri applicativi per arricchire il progetto con mappe, video, effetti hover, card,
+                    menu e bottoni. La pagina dei giochi è suddivisa in due sezioni: la prima dove ci sono le card è divisa in più row e due column, mentre la parte a destra
+                    è interamente dedicata al menu dei filtri.
+                <br>
+                <br>Infine anche le pagine dei singoli giochi sono strutturate tutte seguendo lo stesso layout, illustrato nella sezione quattro dedicata ai Wireframe,
+                    per non disorientare l'utente e fornire una visualizzazione rapida e intuitiva delle informazioni più importanti.
+                </p>
+                <h4>5.2: Aspetto e tipografia</h4>
+                <p style="text-align: justify;">
+                    Lo stile visivo segue un approccio moderno e pulito, con:
+                    <ul>
+                        <li>Font leggibili: Saranno utilizzati caratteri sans-serif per una migliore leggibilità su diversi dispositivi.</li>
+                        <li>Scrittura chiara e diretta: I testi sono strutturati in paragrafi brevi e facilmente comprensibili.</li>
+                        <li>Componenti di interfaccia intuitivi: Pulsanti ben visibili, schede informative e sottolineature per evidenziare le parole cliccabili e facilitare la navigazione.</li>
+                        <li>Feedback visivo: Effetti hover, transizioni fluide, menu e sezioni ben suddivise per migliorare l’esperienza utente.</li>
+                    </ul>
+                    Tutti i link cliccabili sono di un colore diverso rispetto alle altre scritte o sottolineati in modo da renderli visibili a vista d'occhio. I 
+                    pulsanti cliccabili delle card sono in forte contrasto col colore dello sfondo e in generale tutto ciò che si può cliccare ha un effetto hover,
+                    eccezion fatta per i menu a tendina che però sono stati realizzati sfruttando un design intuitivo.
+                </p>
+                <h4>5.3: Colori, icone e font</h4>
+                <p style="text-align: justify;">
+                    Il design del sito è basato su una palette di colori che rimandi fortemente ai colori della pallacanestro. L’header del titolo di ogni pagina è 
+                    stato fatto in arancione il che rimanda istantaneamente al colore del pallone da basket, la breadcrumps è stata colorata di nero per ricordare le 
+                    righe presenti su ogni pallone. Le scritte sono state fatte principalmente in bianco per due motivi: il primo per favorire la leggibilità su sfondo 
+                    arancione, il secondo perché il bianco è un colore chiave della pallacanestro in quanto nella quasi totalità dei campi le righe che delimitano il 
+                    terreno di gioco sono di colore bianco e anche i bordi dei tabelloni sono spesso delimitati da righe dello stesso colore. Ho deciso di colorare 
+                    anche il footer di nero sempre per creare quel contrasto tra nero e arancione presente nei palloni da basket, inoltre ho aggiunto l’effetto per 
+                    cambiare il colore delle icone dei social da bianco ad arancione quando ci si passa sopra col cursore. Infine, come font per il titolo della home e 
+                    per il sottotitolo giochi consigliati ho scelto un font che ricordasse un po' vecchi videogiochi che erano presenti nei cabinati delle sale giochi a 
+                    fine anni ’90 / primi anni 2000 per ricollegarmi anche al mondo digitale e ho inserito le icone di due palloni da basket nel titolo per rendere subito 
+                    l’argomento che verrà trattato nel sito.
+                </p>
+
+                <h3 id="servizi">6. Servizi (Browsing e Interazione)</h3>
+                <p style="text-align: justify;">
+                    In questa sezione andremo ad esplorare le possibili migliorie che si potrebbero implementare all'interno di questo sito internet.
+                </p>
+                <h4>6.1: Strumenti di valorizzazione dell'accesso</h4>
+                <p style="text-align: justify;">
+                    Per migliorare l'accesso ai contenuti e garantire un'esperienza di navigazione più efficace e intuitiva, ho implementato diversi strumenti di 
+                    browsing e interazione, ma è altrettanto importante concentrarsi su ciò che si potrebbe fare per migliorare il progetto.
+                    Oltre alla navigazione tradizionale tramite menu e categorie, ho immaginato i seguenti sistemi di browsing aggiuntivi:
+                    <ul>
+                        <li>Ricerca avanzata con filtri dinamici – Permette agli utenti di affinare la ricerca in base a criteri specifici come data, categoria, popolarità o rilevanza.</li>
+                        <li>Mappa interattiva dei contenuti – Una visualizzazione grafica che collega i contenuti correlati tra loro per facilitare l'esplorazione.</li>
+                        <li>Tag e parole chiave – Sistema di tagging che consente agli utenti di navigare tra gli elementi attraverso parole chiave associate.</li>
+                        <li>Suggerimenti basati sull'intelligenza artificiale – Algoritmi di machine learning suggeriscono contenuti correlati in base alla cronologia di navigazione.</li>
+                        <li>Scorrimento infinito (Infinite Scroll) – Metodo che carica automaticamente nuovi contenuti quando l'utente scorre verso il basso, migliorando la continuità della navigazione.</li>
+                    </ul>
+                </p>
+                <h4>6.2: Utilities e Tools per l’interazione</h4>
+                <p style="text-align: justify;">
+                    Per rendere l'interazione più coinvolgente ed efficace, si prevede l'implementazione di almeno cinque strumenti diversi:
+                    <ul>
+                        <li>Chatbot basato su AI – Un assistente virtuale che fornisce informazioni immediate e aiuta gli utenti a trovare ciò che cercano.</li>
+                        <li>Sezione di commenti e recensioni – Area dedicata al feedback degli utenti per migliorare l'engagement e la partecipazione.</li>
+                        <li>Sistema di notifiche personalizzate – Avvisi su aggiornamenti, nuovi contenuti e interazioni rilevanti per l’utente.</li>
+                        <li>Integrazione con social media – Funzionalità di condivisione e interazione diretta con i social network per ampliare la visibilità dei contenuti.</li>
+                        <li>Modalità di accessibilità avanzata – Opzioni per migliorare l'accesso agli utenti con disabilità, come lettori di schermo, contrasto elevato e comandi vocali.</li>
+                    </ul>
+                </p>
+                <h4>6.3: Altri strumenti, servizi e metodi per valorizzare l’accesso utente</h4>
+                <p style="text-align: justify;">
+                    <ul>
+                        <li>Personalizzazione dell’esperienza utente – Creazione di profili personalizzati per suggerire contenuti e percorsi di navigazione basati sulle preferenze.</li>
+                        <li>Contenuti multimediali interattivi – Video esplicativi, tour virtuali e immagini 360° per migliorare la comprensione dei contenuti.</li>
+                        <li>Gamification – Badge, punti e classifiche per incentivare l'esplorazione del sito e la partecipazione attiva.</li>
+                        <li>Download di risorse offline – Possibilità di scaricare documenti o materiali informativi per la consultazione senza connessione internet.</li>
+                        <li>API per sviluppatori – Accesso a dati e funzionalità per integrare il sito con altre piattaforme e servizi esterni.</li>
+                    </ul>
+                    Questi strumenti e servizi garantiranno un accesso ottimale ai contenuti e un'esperienza utente fluida, coinvolgente e personalizzata.
+                </p>
+
+                <h3 id="bibliografia">7. Bibliografia e Sitografia di Progetto</h3>
+                <p style="text-align: justify;">
+                    Infine di seguito si trovano le applicazioni che ho utilizzato per la realizzazione di questo sito:
+                    <ul>
+                        <li>IDE utilizzato per la scrittura del codice - Visual Studio</li>
+                        <li>Linguaggi utilizzati - HTML, JavaScript, CSS</li>
+                        <li>Per i font dei titoli - https://fonts.google.com</li>
+                        <li>Per gli effetti visivi e i tool - https://getbootstrap.com</li>
+                        <li>Per le icone dei social - https://cdnjs.cloudflare.com</li>
+                        <li>Testi prodotti da me e controllati su - https://it.wikipedia.org, https://store.steampowered.com, https://www.ea.com</li>
+                        <li>Immagini prese da Google e talvolta riadattate a livello dimensionale da me</li>
+                        <li>Per gli articoli relativi alle news - https://www.2k.com, https://www.ea.com, https://www.eurohoops.net</li>
+                        <li>Per l'inserimento di video - https://www.youtube.com</li>
+                        <li>Per l'inserimento della mappa interattiva - https://www.google.it</li>
+                        <li>Per la realizzazione dei Wireframes - https://balsamiq.cloud</li>
+                        <li>Per la realizzazione delle mappe concettuali - https://www.lucidchart.com</li>
+                        <li>Per la scrittura del Web Project Plan - Francesca Tomasi, slide del corso di Informatica Umanistica, a.a. 2024-2025</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+  
+
+    <!-- Footer -->
+    <footer class="text-center text-white p-5 mt-5" style="background-color: black;">
+        <div class="container">
+            <div class="row mb-4">
+                <!-- Sezione Contatti -->
+                <div class="col-md-4">
+                    <h4>Contatti:</h4>
+                    <p>Email: info@tuaazienda.com</p>
+                    <p>Telefono: +123 456 789</p>
+                    <p>Indirizzo: Via Esempio 123, Città</p>
+                </div>
+
+                <!-- Sezione Seguici -->
+                <div class="col-md-4">
+                    <h4>Seguici:</h4>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com" target="_blank" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://t.me/yourtelegramusername" target="_blank" class="social-icon">
+                            <i class="fab fa-telegram-plane"></i> 
+                        </a>              
+                        <a href="https://www.youtube.com" target="_blank" class="social-icon">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Sezione Iscrizione alla Newsletter -->
+                <div class="col-md-4">
+                    <h4>Iscriviti alla nostra Newsletter:</h4>
+                    <form action="#" method="post">
+                        <input type="email" name="email" placeholder="Inserisci la tua email" class="newsletter-input" required>
+                        <button type="submit" class="btn btn-dark">Iscriviti</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Riferimenti legali -->
+            <div class="legal-links">
+                <a href="/privacy-policy" class="text-white">Privacy Policy</a> | 
+                <a href="/cookie-policy" class="text-white">Normativa Cookies</a>
+            </div>
+
+            <!-- Sezione Copyright -->
+            <div class="text-center mt-4">
+                <p>&copy; 2025, Tutti i diritti riservati</p>
+            </div>
+        </div>
+    </footer>
+
+        <!-- Bootstrap JS and dependencies -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <!-- Font Awesome per le icone -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    </body>
+</html>

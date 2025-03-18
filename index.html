@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Basket, videogioco, pallacanestro, videogame, recensione, NBA, NBA 2k, NBA Live">
+    <title>Basketball Corner</title>
+
+    <!-- Dublin Core Metadata -->
+    <meta name="DC.Title" content="Basketball Corner"/>
+    <meta name="DC.Creator" content="Matteo Damaschi"/>
+    <meta name="DC.Subject" content="Home page del sito internet sui giochi di pallacanestro"/>
+    <meta name="DC.Description" content="Introduce gli utenti al sito mostrando le sezioni giochi consigliati e news."/>
+    <meta name="DC.Publisher" content="Basketball Corner"/>
+    <meta name="DC.Contributor" content="Matteo Damaschi"/>
+    <meta name="DC.Date" content="2025-03-18"/>
+    <meta name="DC.Type" content="Testo informativo, Immagini"/>
+    <meta name="DC.Format" content="text/html"/>
+    <meta name="DC.Identifier" content="https://www.Basketball-Corner.it/index"/>
+    <meta name="DC.Source" content=""/>
+    <meta name="DC.Language" content="it"/>
+    <meta name="DC.Relation" content=""/>
+    <meta name="DC.Rights" content="© 2025 Basketball Corner. Tutti i diritti riservati."/>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome per le icone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body onload="checkLoginStatus()">
+    <!-- Header Principale -->
+    <header class="text-white py-4" style="background-color: #f77f00;">
+        <div class="container text-center">
+            <h1 class="display-3">
+            <i class="fas fa-basketball-ball"></i> <!-- Palla da basket prima -->
+                Basketball Corner
+            <i class="fas fa-basketball-ball"></i> <!-- Palla da basket dopo -->
+            </h1>
+        </div>
+    </header>
+
+    <!-- Sotto-Header con navigazione -->
+    <div class="text-white" style="background-color: black; height: 60px;"> <!-- Altezza fissa per la riga nera -->
+        <div class="container h-100 d-flex align-items-center"> <!-- Centra verticalmente tutto -->
+            <nav class="d-flex justify-content-center w-100 align-items-center"> <!-- Centra i pulsanti -->
+                <a href="giochi.html" class="btn btn-outline-light mx-3">Giochi</a>
+                <a href="softwarehouse.html" class="btn btn-outline-light mx-3">Sviluppatori</a>
+                <a href="storia.html" class="btn btn-outline-light mx-3">Storia della NBA</a>
+                <a href="commenti.html" class="btn btn-outline-light mx-3">Commenti</a>
+                <a href="about.html" class="btn btn-outline-light mx-3">About</a>
+            </nav>
+            <div id="loginContainer" class="d-flex align-items-center" style="height: 5vh;">
+                <!-- Pulsante login (visibile solo se non loggato) -->
+                <button id="loginBtn" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+
+                <!-- Pulsante User (visibile solo se loggato) -->
+                <button id="userBtn" class="btn btn-outline-light ms-3" style="display:none;" onclick="openLogoutModal()">
+                    <span>User:</span> <span id="usernameDisplay" class="ms-2"></span> <!-- Allineamento orizzontale -->
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <section class="intro-section">
+        <div class="intro-overlay">
+            <h2>Benvenuto nel mondo del basket virtuale!</h2>
+            <p>
+                Sei pronto a vivere l'emozione del basket come mai prima d'ora? Scopri i giochi che ti permetteranno di
+                scendere in campo con le leggende della NBA, di allenare la tua squadra o di partecipare a tornei di basket
+                a livello mondiale! Che tu sia un fan dei simulatori realistici o delle sfide arcade, qui trovi il meglio dei
+                giochi di basket per ogni tipo di giocatore. <strong>Non perdere l'occasione di metterti alla prova e diventare
+                il campione che hai sempre sognato di essere!</strong>
+            </p>
+        </div>
+    </section>  
+
+    <section class="container my-5">
+        <h2 class="giochi-consigliati-title">Giochi Consigliati</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <a href="NBA2k25.html" class="game-box-link">
+                    <div class="game-box">
+                        <img src="Immagini/nba2k25.jpeg" alt="NBA 2K25" class="img-fluid">
+                        <h3>NBA 2K25</h3>
+                        <!--Dublin Core Metadata-->
+                        <span class="hidden DC.Title">NBA 2K25</span>
+                        <span class="hidden DC.Creator">Visual Concepts</span>
+                        <span class="hidden DC.Date">2025-03-18</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="NBAlive2003.html" class="game-box-link">
+                    <div class="game-box">
+                        <img src="Immagini/nbalive2003.jpg" alt="NBA Live 2003" class="img-fluid">
+                        <h3>NBA Live 2003</h3>
+                        <!--Dublin Core Metadata-->
+                        <span class="hidden DC.Title">NBA Live 2003</span>
+                        <span class="hidden DC.Creator">Visual Concepts</span>
+                        <span class="hidden DC.Date">2025-03-18</span>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="Manager2023.html" class="game-box-link">
+                    <div class="game-box">
+                        <img src="Immagini/Basketball-manager2k23.jpg" alt="FIBA Basketball Manager 2k23" class="img-fluid">
+                        <h3>FIBA Basketball Manager 2023</h3>
+                        <!--Dublin Core Metadata-->
+                        <span class="hidden DC.Title">FIBA Basketball Manager 2k23</span>
+                        <span class="hidden DC.Creator">Visual Concepts</span>
+                        <span class="hidden DC.Date">2025-03-18</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Sezione News -->
+    <section class="container my-5 news-section" style="background-color: #f77f00; padding: 30px;">
+        <h2 style="color: white;">Ultime News:</h2>
+        <div class="row">
+            <!-- News 1 -->
+            <div class="col-md-4">
+                <div class="news-box">
+                    <h3 style="text-align: center;">NBA® 2K25 Season 5:</h3>
+                    <p style="text-align: center;">Dominate the End of the NBA Regular Season with All-New Rewards, new MyTEAM Cards, and More. San Antonio Spurs superstar Victor Wembanyama officially touches down in Season 5 this Friday.</p>
+                    <a href="https://newsroom.2k.com/news/nbar-2k25-season-5-dominate-the-end-of-the-nba-regular-season-with-all-new-rewards-anime-inspired-myteam-cards-and-more" class="btn btn-dark">Leggi di più</a>
+                </div>
+            </div>
+            <!-- News 2 -->
+            <div class="col-md-4">
+                <div class="news-box">
+                    <h3 style="text-align: center;">EA Sports annuncia un periodo di stop da NBA LIve</h3>
+                    <p style="text-align: center;">Per la stagione 2025 non verrà prodotto l'annuale titolo della serie NBA Live. EA si prepara a un ritorno in grande stile per la stagione 2026</p>
+                    <a href="https://www.ea.com/it-it/news/ea-sports-nba-live-update" class="btn btn-dark">Leggi di più</a>
+                </div>
+            </div>
+            <!-- News 3 -->
+            <div class="col-md-4">
+                <div class="news-box">
+                    <h3 style="text-align: center;">Pro Basketball Manager 2025: Lead Your Team to Victory!</h3>
+                    <p style="text-align: center;">Pro Basketball Manager 2025 continues to make its mark as the ultimate basketball management simulation game.</p>
+                    <a href="https://www.eurohoops.net/en/trademarks/1768528/pro-basketball-manager-2025-lead-your-team-to-victory/" class="btn btn-dark">Leggi di più</a>
+                </div>
+            </div>
+        </div>
+    </section>
+        
+    <!-- Modal Login -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="username" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Accedi</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal di conferma Logout -->
+    <div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="logoutModalLabel">Conferma Logout</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Si vuole effettuare la disconnessione?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annulla</button>
+                    <button type="button" class="btn btn-danger" onclick="logout()">Logout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center text-white p-5 mt-5" style="background-color: black;">
+        <div class="container">
+            <div class="row mb-4">
+                <!-- Sezione Contatti -->
+                <div class="col-md-4">
+                    <h4>Contatti:</h4>
+                    <p>Email: info@tuaazienda.com</p>
+                    <p>Telefono: +123 456 789</p>
+                    <p>Indirizzo: Via Esempio 123, Città</p>
+                </div>
+
+                <!-- Sezione Seguici -->
+                <div class="col-md-4">
+                    <h4>Seguici:</h4>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com" target="_blank" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://t.me/yourtelegramusername" target="_blank" class="social-icon">
+                            <i class="fab fa-telegram-plane"></i> 
+                        </a>              
+                        <a href="https://www.youtube.com" target="_blank" class="social-icon">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Sezione Iscrizione alla Newsletter -->
+                <div class="col-md-4">
+                    <h4>Iscriviti alla nostra Newsletter:</h4>
+                    <form action="#" method="post">
+                        <input type="email" name="email" placeholder="Inserisci la tua email" class="newsletter-input" required>
+                        <button type="submit" class="btn btn-dark">Iscriviti</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Riferimenti legali -->
+            <div class="legal-links">
+                <a href="/privacy-policy" class="text-white">Privacy Policy</a> | 
+                <a href="/cookie-policy" class="text-white">Normativa Cookies</a>
+            </div>
+
+            <!-- Sezione Copyright -->
+            <div class="text-center mt-4">
+                <p>&copy; 2025, Tutti i diritti riservati</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+

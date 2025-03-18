@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Basket, videogioco, pallacanestro, videogame, recensione, NBA, NBA 2k, NBA Live">
+    <title>Commenti</title>
+
+    <!-- Dublin Core Metadata -->
+    <meta name="DC.Title" content="Commenti - Sezione di discussione"/>
+    <meta name="DC.Creator" content="Matteo Damaschi"/>
+    <meta name="DC.Subject" content="Piattaforma di commenti e discussione"/>
+    <meta name="DC.Description" content="Pagina dedicata alla pubblicazione e gestione dei commenti degli utenti."/>
+    <meta name="DC.Publisher" content="Basketball corner"/>
+    <meta name="DC.Contributor" content="Matteo Damaschi e utenti"/>
+    <meta name="DC.Date" content="2025-03-18"/>
+    <meta name="DC.Type" content="Testo interattivo"/>
+    <meta name="DC.Format" content="text/html"/>
+    <meta name="DC.Identifier" content="https://www.Basketball-Corner.com/commenti.html"/>
+    <meta name="DC.Source" content=""/>
+    <meta name="DC.Language" content="it"/>
+    <meta name="DC.Relation" content="https://www.Basketball-Corner.com/index.html"/>
+    <meta name="DC.Rights" content="© 2025 Basketball Corner. Tutti i diritti riservati."/>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="commenti">
+
+    <header class="text-white p-3" style="background-color: #f77f00;">
+        <div class="container d-flex justify-content-between">
+            <h1>Commenti</h1>
+            <div class="dropdown">
+                <button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                    Menu
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item" href="index.html">Home</a></li>
+                    <li><a class="dropdown-item" href="giochi.html">Giochi</a></li>
+                    <li><a class="dropdown-item" href="softwarehouse.html">Sviluppatori</a></li>
+                    <li><a class="dropdown-item" href="storia.html">Storia della NBA</a></li>
+                    <li><a class="dropdown-item" href="about.html">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sotto header con la breadcrumb -->
+        <div class="text-white py-0.5 " style="background-color: black;">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Commenti</li>
+                </ol>
+            </nav>
+        </div>
+    
+
+    <section class="container my-5">
+        <div class="comments-section d-flex gap-4" style="min-height: 500px;">
+            <!-- Sezione per inserire commenti -->
+            <div class="comment-input-container" style="flex: 1; background-color: #f77f00; border-radius: 15px; padding: 20px; height: 350px;">
+                <h3 class="text-white">Lascia il tuo commento</h3>
+                <label for="username" class="text-white">Username:</label>
+                <input type="text" class="form-control mb-3" id="username" placeholder="Inserisci il tuo nome">
+                <label for="commentText" class="text-white">Inserisci qui il tuo commento:</label>
+                <textarea class="form-control" id="commentText" rows="4" placeholder="Scrivi il tuo commento"></textarea>
+                <button class="btn btn-light mt-3" onclick="submitComment()">Pubblica commento</button>
+            </div>
+
+            <!-- Sezione dei commenti già inviati -->
+            <div class="comment-list-container" style="flex: 2; background-color: #f77f00; border-radius: 15px; padding: 20px; display: none;">
+                <div id="commentList">
+                    <!-- I commenti verranno aggiunti qui tramite JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-white p-5 mt-5" style="background-color: black;">
+        <div class="container">
+            <div class="row mb-4">
+                <!-- Sezione Contatti -->
+                <div class="col-md-4">
+                    <h4>Contatti:</h4>
+                    <p>Email: info@tuaazienda.com</p>
+                    <p>Telefono: +123 456 789</p>
+                    <p>Indirizzo: Via Esempio 123, Città</p>
+                </div>
+
+                <!-- Sezione Seguici -->
+                <div class="col-md-4">
+                    <h4>Seguici:</h4>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com" target="_blank" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://t.me/yourtelegramusername" target="_blank" class="social-icon">
+                            <i class="fab fa-telegram-plane"></i> 
+                        </a>              
+                        <a href="https://www.youtube.com" target="_blank" class="social-icon">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Sezione Iscrizione alla Newsletter -->
+                <div class="col-md-4">
+                    <h4>Iscriviti alla nostra Newsletter:</h4>
+                    <form action="#" method="post">
+                        <input type="email" name="email" placeholder="Inserisci la tua email" class="newsletter-input" required>
+                        <button type="submit" class="btn btn-dark">Iscriviti</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Riferimenti legali -->
+            <div class="legal-links">
+                <a href="/privacy-policy" class="text-white">Privacy Policy</a> | 
+                <a href="/cookie-policy" class="text-white">Normativa Cookies</a>
+            </div>
+
+            <!-- Sezione Copyright -->
+            <div class="text-center mt-4">
+                <p>&copy; 2025, Tutti i diritti riservati</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!-- Font Awesome per le icone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="ControllerCommenti.js"></script>
+</body>
+</html>
+
+

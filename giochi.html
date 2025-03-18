@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Basket, videogioco, pallacanestro, videogame, recensione, NBA, NBA 2k, NBA Live">
+    <title>Giochi di Pallacanestro</title>
+
+    <!-- Dublin Core Metadata -->
+    <meta name="DC.Title" content="Giochi di Pallacanestro"/>
+    <meta name="DC.Creator" content="Matteo Damaschi"/>
+    <meta name="DC.Subject" content="Catalogo di videogiochi sulla pallacanestro"/>
+    <meta name="DC.Description" content="Una panoramica sui principali videogiochi di basket, con filtri per piattaforma, anno di uscita, valutazioni e altre opzioni."/>
+    <meta name="DC.Publisher" content="Basketball Corner"/>
+    <meta name="DC.Contributor" content="Matteo Damaschi"/>
+    <meta name="DC.Date" content="2025-03-18"/>
+    <meta name="DC.Type" content="Testo informativo, Immagini, Filtri interattivi"/>
+    <meta name="DC.Format" content="text/html"/>
+    <meta name="DC.Identifier" content="https://www.Basketball-Corner.it/giochi"/>
+    <meta name="DC.Source" content=""/>
+    <meta name="DC.Language" content="it"/>
+    <meta name="DC.Relation" content="https://www.Basketball-Corner.com/index.html"/>
+    <meta name="DC.Rights" content="© 2025 Basketball Corner. Tutti i diritti riservati."/>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="text-white p-3" style="background-color: #f77f00;">
+        <div class="container d-flex justify-content-between">
+            <h1>Catalogo giochi</h1>
+            <!-- Menu a tendina a destra -->
+            <div class="dropdown">
+                <button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                    Menu
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item" href="index.html">Home</a></li>
+                    <li><a class="dropdown-item" href="softwarehouse.html">Sviluppatori</a></li>
+                    <li><a class="dropdown-item" href="storia.html">Storia della NBA</a></li>
+                    <li><a class="dropdown-item" href="Commenti.html">Commenti</a></li>
+                    <li><a class="dropdown-item" href="about.html">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sotto header con la breadcrumb -->
+    <div class="text-white py-0.5 " style="background-color: black;">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Catalogo giochi sulla pallacanestro</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Titolo per Timeline -->
+    <section class="container my-5 text-center">
+        <h2 class="giochi-consigliati-title">Timeline dei giochi</h2>
+        <p><a href="timeline.html" class="btn btn-outline-warning">Clicca qui per visualizzare la timeline dei giochi</a></p>
+    </section>
+
+    <section class="container my-5">
+        <div class="row">
+            <!-- Sezione giochi a sinistra -->
+            <div class="col-md-9" id="game-list-container">
+                <div class="row" id="game-list">
+                    <!-- I giochi saranno caricati dinamicamente qui -->
+                </div>
+    
+                <!-- Barra di paginazione -->
+                <nav aria-label="Page navigation">
+                    <ul class="pagination justify-content-center mt-4">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+    
+            <!-- Sezione filtri a destra -->
+            <div class="col-md-3">
+                  <!-- Barra di ricerca in un rettangolo arancione separato -->
+                <div class="filter-box-search mt-4">
+                <label for="search-bar" class="form-label">Cerca per nome del gioco</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="search-bar" placeholder="Cerca un gioco...">
+                        <button class="btn btn-outline-secondary" type="button" id="search-button">Cerca</button>
+                    </div>
+                </div>
+           <!-- Blocco arancione per il menu -->
+                <div class="filter-box" style="margin-top: 30px;">
+                    <h3 style="color:white;">Filtra i Giochi</h3>
+
+                    <!-- Sezione Filtri per Ordinamento -->
+                    <div class="list-group">
+                        <h5>Ordina per:</h5>
+
+                        <!-- Menu a tendina per ordinamento Metacritic -->
+                        <div class="form-group">
+                            <label for="sort-metacritic" style="color:white;">Metacritic</label>
+                            <select class="form-control" id="sort-metacritic">
+                                <option value="">Seleziona un'opzione</option>
+                                <option value="asc">Metacritic: Ascendente</option>
+                                <option value="desc">Metacritic: Discendente</option>
+                            </select>
+                        </div>
+
+                        <!-- Menu a tendina per ordinamento Anno -->
+                        <div class="form-group mt-3">
+                            <label for="sort-year" style="color:white;">Anno</label>
+                            <select class="form-control" id="sort-year">
+                                <option value="">Seleziona un'opzione</option>
+                                <option value="asc">Anno: Ascendente</option>
+                                <option value="desc">Anno: Discendente</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Sezione Filtri per Console -->
+                    <div class="list-group mt-4">
+                        <h5>Filtra per:</h5>
+
+                        <!-- Menu a tendina PlayStation -->
+                        <div class="form-group">
+                            <label for="playstation-select" style="color:white;">PlayStation</label>
+                            <select class="form-control" id="playstation-select">
+                                <option value="">Seleziona una versione</option>
+                                <option value="ps1">PlayStation 1</option>
+                                <option value="ps2">PlayStation 2</option>
+                                <option value="ps3">PlayStation 3</option>
+                                <option value="ps4">PlayStation 4</option>
+                                <option value="ps5">PlayStation 5</option>
+                            </select>
+                        </div>
+
+                        <!-- Menu a tendina Xbox -->
+                        <div class="form-group mt-3">
+                            <label for="xbox-select" style="color:white;">Xbox</label>
+                            <select class="form-control" id="xbox-select">
+                                <option value="">Seleziona una versione</option>
+                                <option value="xbox-original">Xbox (Originale)</option>
+                                <option value="xbox-360">Xbox 360</option>
+                                <option value="xbox-one">Xbox One</option>
+                                <option value="xbox-series-x">Xbox Series X</option>
+                                <option value="xbox-series-s">Xbox Series S</option>
+                            </select>
+                        </div>
+
+                        <!-- Menu a tendina Nintendo -->
+                        <div class="form-group mt-3">
+                            <label for="nintendo-select" style="color:white;">Nintendo</label>
+                            <select class="form-control" id="nintendo-select">
+                                <option value="">Seleziona una versione</option>
+                                <option value="n64">Nintendo 64</option>
+                                <option value="gamecube">GameCube</option>
+                                <option value="wii">Wii</option>
+                                <option value="wii-u">Wii U</option>
+                                <option value="switch">Nintendo Switch</option>
+                            </select>
+                        </div>
+
+                        <!-- Menu a tendina PC -->
+                        <div class="form-group mt-3">
+                            <label for="pc-select" style="color:white;">PC</label>
+                            <select class="form-control" id="pc-select">
+                                <option value="">Seleziona una piattaforma</option>
+                                <option value="windows">Windows</option>
+                                <option value="macos">MacOS</option>
+                                <option value="linux">Linux</option>
+                            </select>
+                        </div>
+
+                        <!-- Menu a tendina Console Portatili -->
+                        <div class="form-group mt-3">
+                            <label for="portable-select" style="color:white;">Console Portatili</label>
+                            <select class="form-control" id="portable-select">
+                                <option value="">Seleziona una console</option>
+                                <option value="psp">PSP</option>
+                                <option value="vita">PS Vita</option>
+                                <option value="3ds">3DS</option>
+                                <option value="switch-lite">Switch Lite</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Sezione Filtri Opzioni Aggiuntive -->
+                    <div class="list-group mt-4">
+                        <h5>Altri Filtri</h5>
+
+                        <!-- Checkbox per "Disponibile in Digitale" -->
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="filter-digital" value="digital">
+                            <label class="form-check-label" for="filter-digital">
+                                Disponibile in Digitale
+                            </label>
+                        </div>
+
+                        <!-- Checkbox per "Supporta Multiplayer" -->
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="filter-multiplayer" value="multiplayer">
+                            <label class="form-check-label" for="filter-multiplayer">
+                                Supporta Multiplayer
+                            </label>
+                        </div>
+
+                        <!-- Checkbox per "Supporta VR" -->
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="filter-vr" value="vr">
+                            <label class="form-check-label" for="filter-vr">
+                                Supporta VR
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center text-white p-5 mt-5" style="background-color: black;">
+        <div class="container">
+            <div class="row mb-4">
+                <!-- Sezione Contatti -->
+                <div class="col-md-4">
+                    <h4>Contatti:</h4>
+                    <p>Email: info@tuaazienda.com</p>
+                    <p>Telefono: +123 456 789</p>
+                    <p>Indirizzo: Via Esempio 123, Città</p>
+                </div>
+
+                <!-- Sezione Seguici -->
+                <div class="col-md-4">
+                    <h4>Seguici:</h4>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com" target="_blank" class="social-icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com" target="_blank" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://t.me/yourtelegramusername" target="_blank" class="social-icon">
+                            <i class="fab fa-telegram-plane"></i> 
+                        </a>              
+                        <a href="https://www.youtube.com" target="_blank" class="social-icon">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Sezione Iscrizione alla Newsletter -->
+                <div class="col-md-4">
+                    <h4>Iscriviti alla nostra Newsletter:</h4>
+                    <form action="#" method="post">
+                        <input type="email" name="email" placeholder="Inserisci la tua email" class="newsletter-input" required>
+                        <button type="submit" class="btn btn-dark">Iscriviti</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Riferimenti legali -->
+            <div class="legal-links">
+                <a href="/privacy-policy" class="text-white">Privacy Policy</a> | 
+                <a href="/cookie-policy" class="text-white">Normativa Cookies</a>
+            </div>
+
+            <!-- Sezione Copyright -->
+            <div class="text-center mt-4">
+                <p>&copy; 2025, Tutti i diritti riservati</p>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="ControllerGiochi.js"></script>
+    <!-- Font Awesome per le icone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</body>
+</html>
